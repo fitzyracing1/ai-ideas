@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Ideas — a library by Joshua Almeida</title>
+<meta name="description" content="A searchable library of AI ideas by Joshua Almeida: Four Tenets of AI, bound-loop, lit/dark CI lights, lit-fixer, fakegreen, CREDIT-1, patch-cloud and DIS.">
+<link rel="canonical" href="https://fitzyracing1.github.io/ai-ideas/">
+<meta property="og:type" content="website"><meta property="og:title" content="AI Ideas"><meta property="og:description" content="A searchable library of AI ideas, each linked to the repo that builds it.">
+<meta property="og:url" content="https://fitzyracing1.github.io/ai-ideas/"><meta property="og:image" content="https://fitzyracing1.github.io/ai-ideas/og.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://fitzyracing1.github.io/ai-ideas/og.png">
+<meta name="theme-color" content="#0b0d12">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"AI Ideas","url":"https://fitzyracing1.github.io/ai-ideas/","author":{"@type":"Person","name":"Joshua Almeida","url":"https://github.com/fitzyracing1"},"license":"https://opensource.org/licenses/MIT"}</script>
+<style>
+:root{--bg:#0b0d12;--card:#141824;--line:#232a3b;--tx:#e6e9f2;--mut:#8a93a8;--lit:#ffd166;--acc:#7aa2ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#1b2340,transparent),var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{max-width:1100px;margin:auto;padding:56px 20px 16px}h1{font-size:44px;margin:0;letter-spacing:-1px}h1 span{color:var(--lit);text-shadow:0 0 18px #ffd16688}
+header p{color:var(--mut);max-width:720px}.bar{max-width:1100px;margin:auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:10px}
+input,select{background:var(--card);border:1px solid var(--line);color:var(--tx);padding:10px 12px;border-radius:10px;font-size:15px}input{flex:1;min-width:220px}
+.tags{max-width:1100px;margin:12px auto 0;padding:0 20px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:#1a2030;border:1px solid var(--line);color:var(--mut);padding:3px 10px;border-radius:99px;font-size:13px;cursor:pointer}.tag.on{color:var(--bg);background:var(--acc);border-color:var(--acc)}
+main{max-width:1100px;margin:auto;padding:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,#171c2a,var(--card));border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:.15s}.card:hover{border-color:var(--acc);transform:translateY(-2px)}
+.card h2{margin:0;font-size:19px}.card p{margin:0;color:var(--mut);font-size:14.5px}.meta{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--mut)}
+.code{font-family:ui-monospace,monospace;letter-spacing:2px}.code b{color:var(--lit);text-shadow:0 0 8px #ffd16688}.code i{color:#555;font-style:normal}
+a{color:var(--acc);text-decoration:none}.links{margin-top:auto;display:flex;gap:14px;font-size:14px}footer{text-align:center;color:var(--mut);padding:30px;font-size:13px}
+</style></head><body>
+<header><h1>AI <span>Ideas</span></h1><p>A library of AI ideas by Joshua Almeida, each linked to the repo that builds it. Tenets code: Cost · Bridge · Work · Theory, active-low — <span class="code"><b>●●●●</b></span> <code>0000</code> = AI online.</p></header>
+<div class="bar"><input id="q" type="search" placeholder="Search ideas…" aria-label="Search ideas"><select id="t" aria-label="Tenets code"><option value="">Any tenets code</option></select><select id="s" aria-label="Status"><option value="">Any status</option></select></div>
+<div class="tags" id="tags"></div><main id="list"></main>
+<noscript><p style="text-align:center">See the <a href="https://github.com/fitzyracing1/ai-ideas#index">index on GitHub</a>.</p></noscript>
+<footer>MIT © 2026 Joshua Almeida · <a href="https://github.com/fitzyracing1/ai-ideas">GitHub</a> · <a href="ideas.json">ideas.json</a> · no tracking</footer>
+<script>
+const R='https://github.com/fitzyracing1/ai-ideas/blob/main/ideas/';let all=[],tag='';const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const lamp=c=>[...c].map(b=>b==='0'?'<b title="lit">●</b>':'<i title="dark">○</i>').join('');
+function draw(){const q=$('q').value.toLowerCase(),t=$('t').value,s=$('s').value;
+$('list').innerHTML=all.filter(i=>(!q||(i.title+i.summary+i.tags.join(' ')).toLowerCase().includes(q))&&(!t||i.tenets===t)&&(!s||i.status===s)&&(!tag||i.tags.includes(tag))).map(i=>`<article class="card"><h2>${esc(i.title)}</h2><div class="meta"><span class="code">${lamp(i.tenets)}</span><code>${i.tenets}</code><span>· ${esc(i.status)}</span></div><p>${esc(i.summary)}</p><div>${i.tags.map(g=>`<span class="tag" data-t="${esc(g)}">${esc(g)}</span>`).join(' ')}</div><div class="links"><a href="${esc(i.repo)}">Repo →</a><a href="${R+i.slug}.md">Idea</a></div></article>`).join('')||'<p>No ideas match.</p>';
+document.querySelectorAll('.tag').forEach(e=>{e.classList.toggle('on',e.dataset.t===tag);e.onclick=()=>{tag=tag===e.dataset.t?'':e.dataset.t;draw()}})}
+fetch('ideas.json').then(r=>r.json()).then(d=>{all=d;const u=k=>[...new Set(d.flatMap(i=>[].concat(i[k])))].sort();
+u('tenets').forEach(v=>$('t').add(new Option(v,v)));u('status').forEach(v=>$('s').add(new Option(v,v)));
+$('tags').innerHTML=u('tags').map(g=>`<span class="tag" data-t="${esc(g)}">${esc(g)}</span>`).join('');draw()});
+['q','t','s'].forEach(i=>$(i).oninput=draw);
+</script></body></html>

@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "bound-bucket-superintelligence",
+    "title": "Bound bucket superintelligence",
+    "summary": "A bound bucket uses AI to drive an attack bot that derives information from an LLM: the bucket fences targets and steps, the oracle (LLM) proposes, the driver acts, the checker reads the light.",
+    "status": "prototype",
+    "tenets": "0000",
+    "repo": "https://github.com/fitzyracing1/bound-loop",
+    "tags": [
+      "loop",
+      "llm",
+      "safety",
+      "agents"
+    ]
+  },
+  {
+    "slug": "credit-as-reputation",
+    "title": "Credit as reputation",
+    "summary": "Publish who you credit, and for what, as signed (ed25519), hash-chained, append-only thank-you grants. Credit is recognition only, not money and not a security.",
+    "status": "prototype",
+    "tenets": "0000",
+    "repo": "https://github.com/fitzyracing1/credit",
+    "tags": [
+      "reputation",
+      "open-source",
+      "standard"
+    ]
+  },
+  {
+    "slug": "dis-status-bot",
+    "title": "DIS status bot",
+    "summary": "Self-hostable status bot that watches your sites and marks each one lit (up and healthy) or dark (down, erroring, or too slow).",
+    "status": "published",
+    "tenets": "0000",
+    "repo": "https://github.com/fitzyracing1/DIS",
+    "tags": [
+      "monitoring",
+      "status",
+      "lights",
+      "self-hosted"
+    ]
+  },
+  {
+    "slug": "fakegreen",
+    "title": "fakegreen: catch agents faking passing builds",
+    "summary": "Deterministic scanner that reads an AI coding agent's git diff and flags ways it faked a passing build: skipped or deleted tests, weakened assertions, CI forced to pass.",
+    "status": "published",
+    "tenets": "0000",
+    "repo": "https://github.com/fitzyracing1/fakegreen",
+    "tags": [
+      "agents",
+      "testing",
+      "ci",
+      "tooling"
+    ]
+  },
+  {
+    "slug": "four-tenets-of-ai",
+    "title": "Four Tenets of AI",
+    "summary": "AI defined by four tenets (Cost, Bridge, Work, Theory), each kept as low as possible. A 4-bit active-low code reads 0000 when AI is online.",
+    "status": "published",
+    "tenets": "0000",
+    "repo": "https://github.com/fitzyracing1/ai-tenets",
+    "tags": [
+      "tenets",
+      "standard",
+      "active-low"
+    ]
+  },
+  {
+    "slug": "lit-dark-ci-lights",
+    "title": "Lit/dark CI lights standard",
+    "summary": "One bit of CI truth named only lit or dark, active-low: lit = 0, dark = 1. GitHub Actions conclusion 'success' maps to lit; anything else maps to dark.",
+    "status": "published",
+    "tenets": "0000",
+    "repo": "https://github.com/fitzyracing1/lit-dark",
+    "tags": [
+      "ci",
+      "standard",
+      "active-low",
+      "lights"
+    ]
+  },
+  {
+    "slug": "patch-cloud",
+    "title": "patch-cloud",
+    "summary": "Opt-in npm-compatible registry: while a package's real upstream CI light is dark, serve a fixed fork under the same package name.",
+    "status": "live",
+    "tenets": "0000",
+    "repo": "https://github.com/fitzyracing1/patch-cloud",
+    "tags": [
+      "npm",
+      "registry",
+      "lights",
+      "supply-chain"
+    ]
+  },
+  {
+    "slug": "throwaway-fix-branches",
+    "title": "Throwaway fix branches (lit-fixer)",
+    "summary": "A GitHub App that notices a dark default-branch CI, tries safe fixes on throwaway branches, and opens one PR only after a try turns lit. It never merges.",
+    "status": "prototype",
+    "tenets": "0000",
+    "repo": "https://github.com/fitzyracing1/lit-fixer",
+    "tags": [
+      "ci",
+      "github-app",
+      "automation",
+      "lights"
+    ]
+  }
+]

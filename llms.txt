@@ -1,0 +1,7 @@
+# AI Ideas
+> A library of AI ideas by Joshua Almeida (fitzyracing1). One Markdown file per idea, linked to the repo that builds it. Tenets code: 4-bit active-low Cost/Bridge/Work/Theory, 0000 = AI online.
+
+- [Site](https://fitzyracing1.github.io/ai-ideas/)
+- [ideas.json](https://raw.githubusercontent.com/fitzyracing1/ai-ideas/main/ideas.json): all ideas as JSON
+- [ideas/](https://github.com/fitzyracing1/ai-ideas/tree/main/ideas): one file per idea
+- [Four Tenets of AI](https://github.com/fitzyracing1/ai-tenets)

@@ -96,6 +96,20 @@
     ]
   },
   {
+    "slug": "the-ladder",
+    "title": "The ladder: bit, local, pi, tenets",
+    "summary": "Four levels, each building on the last: exact (bit) -> finite (local) -> infinite (pi) -> deciding what's enough (the four tenets).",
+    "status": "published",
+    "tenets": "0000",
+    "repo": "https://github.com/fitzyracing1/ai-tenets",
+    "tags": [
+      "tenets",
+      "ladder",
+      "active-low",
+      "precision"
+    ]
+  },
+  {
     "slug": "throwaway-fix-branches",
     "title": "Throwaway fix branches (lit-fixer)",
     "summary": "A GitHub App that notices a dark default-branch CI, tries safe fixes on throwaway branches, and opens one PR only after a try turns lit. It never merges.",

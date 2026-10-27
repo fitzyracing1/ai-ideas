@@ -20,6 +20,7 @@ A library of AI ideas by Joshua Almeida, one Markdown file per idea, each linked
 | [Four Tenets of AI](ideas/four-tenets-of-ai.md) | AI defined by four tenets (Cost, Bridge, Work, Theory), each kept as low as possible. A 4-bit active-low code reads 0000 when AI is online. | published | `0000` | [ai-tenets](https://github.com/fitzyracing1/ai-tenets) |
 | [Lit/dark CI lights standard](ideas/lit-dark-ci-lights.md) | One bit of CI truth named only lit or dark, active-low: lit = 0, dark = 1. GitHub Actions conclusion 'success' maps to lit; anything else maps to dark. | published | `0000` | [lit-dark](https://github.com/fitzyracing1/lit-dark) |
 | [patch-cloud](ideas/patch-cloud.md) | Opt-in npm-compatible registry: while a package's real upstream CI light is dark, serve a fixed fork under the same package name. | live | `0000` | [patch-cloud](https://github.com/fitzyracing1/patch-cloud) |
+| [The ladder: bit, local, pi, tenets](ideas/the-ladder.md) | Four levels, each building on the last: exact (bit) -> finite (local) -> infinite (pi) -> deciding what's enough (the four tenets). | published | `0000` | [ai-tenets](https://github.com/fitzyracing1/ai-tenets) |
 | [Throwaway fix branches (lit-fixer)](ideas/throwaway-fix-branches.md) | A GitHub App that notices a dark default-branch CI, tries safe fixes on throwaway branches, and opens one PR only after a try turns lit. It never merges. | prototype | `0000` | [lit-fixer](https://github.com/fitzyracing1/lit-fixer) |
 <!-- ideas:end -->
 
